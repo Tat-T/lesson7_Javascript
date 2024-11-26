@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="master.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <section class="row mt-3 bg-light border rounded p-3">
+            <h5 class="text-primary">Задание 1</h5>
+            <p>
+                Создать html-страницу с кнопкой, по нажатию на которую
+                добавляются цветные блоки на страницу. По клику на сам блок,
+                он должен удаляться со страницы.
+
+            </p>
+            <div class="col-12">
+                <div class="d-grid mt-3">
+                    <button id="add-block" class="btn btn-success">Add block</button>
+                </div>
+                <div id="palette"></div>
+            </div>
+        </section>
+
+        <section class="row mt-3 bg-light border rounded p-3">
+            <h5 class="text-primary">Задание 2</h5>
+            <p>
+                Создать html-страницу с текстом и палитрой цветов.
+                При клике на цвет палитры, должен изменяться цвет текста на
+                выбранный. Для указания, какой ячейке какой цвет соответствует,
+                можно использовать атрибут data-color в каждой ячейке, а потом
+                с помощью JS получать необходимый цвет из этого атрибута.
+            </p>
+            <div class="col-12">
+                <div class="color-picker">
+                    <div class="color-block" style="background-color:#000000;" data-color="#000000"></div>
+                    <div class="color-block" style="background-color:#8A8A8A;" data-color="#8A8A8A"></div>
+                    <div class="color-block" style="background-color:#92001C;" data-color="#92001C"></div>
+                    <div class="color-block" style="background-color:#EF242D;" data-color="#EF242D"></div>
+                    <div class="color-block" style="background-color:#FFFF00;" data-color="#FFFF00"></div>
+                    <div class="color-block" style="background-color:#2BB857;" data-color="#2BB857"></div>
+                    <div class="color-block" style="background-color:#00AA9A;" data-color="#00AA9A"></div>
+                    <div class="color-block" style="background-color:#4A53D1;" data-color="#4A53D1"></div>
+                    <div class="color-block" style="background-color:#AB54AC;" data-color="#AB54AC"></div>
+
+                    <div class="color-block" style="background-color:#FFFFFF;" data-color="#FFFFFF"></div>
+                    <div class="color-block" style="background-color:#D7D7D7;" data-color="#D7D7D7"></div>
+                    <div class="color-block" style="background-color:#C08462;" data-color="#C08462"></div>
+                    <div class="color-block" style="background-color:#FFC6D0;" data-color="#FFC6D0"></div>
+                    <div class="color-block" style="background-color:#F1E7B7;" data-color="#F1E7B7"></div>
+                    <div class="color-block" style="background-color:#BCE925;" data-color="#BCE925"></div>
+                    <div class="color-block" style="background-color:#A2DDEC;" data-color="#A2DDEC"></div>
+                    <div class="color-block" style="background-color:#7B9BC4;" data-color="#7B9BC4"></div>
+                    <div class="color-block" style="background-color:#CDC5EA;" data-color="#CDC5EA"></div>
+                </div>
+                <p class="color-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis eligendi quam
+                    dolorum quas laboriosam omnis sunt, cum, esse aperiam tenetur libero in accusantium quisquam
+                    sapiente culpa, illo neque modi temporibus?
+                </p>
+            </div>
+
+        </section>
+
+        <section class="row mt-3 bg-light border rounded p-3">
+            <h5 class="text-primary">Задание 3</h5>
+            <p>
+                Создать html-страницу со статьей, комментариями к ней и
+                формой для добавления нового комментария.
+                При нажатии на кнопкуДобавить комментарийформа должна
+                очищаться, а комментарий добавляться к списку всех комментариев. Комментарий состоит из имени
+                пользователя, даты и текста.
+            </p>
+            <div class="col-12">
+                <h4 class="text-info px-3">О БЕСПЛАТНОМ СЫРЕ</h4>
+
+                <p class="bg-white text-muted p-3">
+                    Умные мыши сперва кричат: "В атаку!", а потом спокойно забирают сыр
+                </p>
+
+                <div class="comments">
+
+                </div>
+
+                <form class="comment-form" method="post" action="http://localhost">
+                    <h6>Leave your comment:</h6>
+                    <div class="row mt-3">
+                        <div class="col-2">
+                            <label for="username" class="form-label">Your name:</label>
+                        </div>
+
+                        <div class="col-10">
+                            <input id="username" class="form-control" name="username">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-2">
+                            <label for="user-comment" class="form-label" name="username"></label>
+                        </div>
+                        <div class="col-10">
+                            <textarea name="comment" id="user-comment" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="d-grid mt-3">
+                        <button type="submit" class="btn btn-success">Add comment</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
